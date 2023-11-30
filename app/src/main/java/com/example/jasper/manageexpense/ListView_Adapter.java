@@ -9,10 +9,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Techsoft-003 on 3/28/2017.
- */
-
 public class ListView_Adapter extends BaseAdapter {
     Context context;
     List<ListView_List>listView_lists;

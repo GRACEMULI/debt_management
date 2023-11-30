@@ -15,7 +15,7 @@ import java.util.Locale;
 import java.util.Set;
 
 /**
- * Created by Jasper on 2/24/2017.
+ *
  */
 
 public class DBHelper extends SQLiteOpenHelper {

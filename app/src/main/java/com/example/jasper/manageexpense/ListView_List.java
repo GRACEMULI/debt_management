@@ -1,9 +1,5 @@
 package com.example.jasper.manageexpense;
 
-/**
- * Created by Techsoft-003 on 3/28/2017.
- */
-
 public class ListView_List {
     private int id;
     private String name;

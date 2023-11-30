@@ -55,7 +55,7 @@ public class Overview extends Fragment{
         c.moveToFirst();
         c.getInt(0);
 
-        DecimalFormat precision = new DecimalFormat("0.00 Php");
+        DecimalFormat precision = new DecimalFormat("0.00 Ksh");
         total.setText(precision.format(c.getInt(0)));
         return c;
     }

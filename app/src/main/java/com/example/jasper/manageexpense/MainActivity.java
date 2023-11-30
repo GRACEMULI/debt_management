@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity
 
         Overview fragment = new Overview();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.frame, fragment, "Overview");
+        fragmentTransaction.replace(R.id.frame, fragment, "Home");
         fragmentTransaction.commit();
     }
 
@@ -96,7 +96,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.exit:
                 finish();
                 return true;
-            }/*
+            }
+
+            /*
 
                 if (id == R.id.action_red){
                     relativeLayout.setBackgroundColor(Color.RED);
@@ -125,22 +127,22 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.Overview) {
-            setTitle("Overview");
+            setTitle("Home");
             Overview fragment = new Overview();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.frame, fragment, "Overview");
+            fragmentTransaction.replace(R.id.frame, fragment, "Home");
             fragmentTransaction.commit();
         } else if (id == R.id.History) {
-            setTitle("History");
+            setTitle("My Debts");
             History fragment = new History();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.frame, fragment, "History");
+            fragmentTransaction.replace(R.id.frame, fragment, "View Debts");
             fragmentTransaction.commit();
         } else if (id == R.id.Graph_all) {
-            setTitle("Graph");
+            setTitle("Pie Chart");
             Graph_all fragment = new Graph_all();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.frame, fragment, "Graphs");
+            fragmentTransaction.replace(R.id.frame, fragment, "Donut Chart");
             fragmentTransaction.commit();
         }else if (id == R.id.Distribution) {
             setTitle("Distribution");

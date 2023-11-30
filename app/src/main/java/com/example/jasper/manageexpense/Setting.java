@@ -18,11 +18,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * Created by Jasper on 2/27/2017.
- */
-
 public class Setting extends Activity{
     RelativeLayout relativeLayout;
 

@@ -13,9 +13,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Techsoft-003 on 3/30/2017.
- */
 
 public class Graph_all_Adapter extends BaseAdapter {
     Context context;

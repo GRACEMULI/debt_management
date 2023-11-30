@@ -13,7 +13,7 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 /**
- * Created by Jasper on 2/21/2017.
+ *
  */
 
 public class Budget extends Fragment {

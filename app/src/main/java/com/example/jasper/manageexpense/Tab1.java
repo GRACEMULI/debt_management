@@ -35,9 +35,6 @@ import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Jasper on 3/2/2017.
- */
 
 public class Tab1 extends Activity {
     ListView listView;
