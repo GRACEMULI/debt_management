@@ -5,29 +5,26 @@
 
 
     <TextView
-        android:id="@+id/hist_date"
+        android:id="@+id/hist_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="Date" />
+        android:text="Name" />
 
     <TextView
-        android:id="@+id/hist_name"
+        android:id="@+id/hist_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/hist_date"
-        android:text="Name" />
+        android:layout_below="@+id/hist_name"
+        android:text="Due Date" />
 
     <TextView
         android:id="@+id/hist_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/hist_name"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/hist_date"
         android:gravity="center"
         android:text="Amount"
         android:textAlignment="center" />

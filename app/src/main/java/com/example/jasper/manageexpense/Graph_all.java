@@ -34,10 +34,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Created by Techsoft-003 on 3/9/2017.
- */
-
 public class Graph_all extends Fragment {
 
     public Graph_all(){
@@ -136,7 +132,7 @@ public class Graph_all extends Fragment {
         mChart.invalidate();
         mChart.animateXY(2000, 2000);
         mChart.setHoleRadius(70f);
-        mChart.setCenterText("Expense\nBudget");
+        mChart.setCenterText("Debts\nBudget");
         mChart.setCenterTextSize(30);
         mChart.setCenterTextColor(Color.CYAN);
 

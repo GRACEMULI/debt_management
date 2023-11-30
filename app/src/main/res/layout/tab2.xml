@@ -38,7 +38,8 @@
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="@android:color/background_light"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:gravity="center_horizontal" />
 
         <TextView
             android:id="@+id/textView3"
@@ -53,8 +54,6 @@
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
@@ -89,7 +88,8 @@
             android:hint="0.00"
             android:inputType="textPersonName"
             android:textAlignment="center"
-            android:textColorLink="@android:color/background_dark" />
+            android:textColorLink="@android:color/background_dark"
+            android:gravity="center_horizontal" />
     </LinearLayout>
 
     <LinearLayout
@@ -106,7 +106,6 @@
             android:ems="10"
             android:hint="Category"
             android:inputType="textPersonName"
-
             android:textColorLink="@android:color/background_dark"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -138,7 +137,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="ADDITIONAL INFOS"
+            android:hint="ADDITIONAL INFORMATION"
             android:inputType="textPersonName"
             android:textColor="@android:color/background_dark"
             android:textSize="14sp"
@@ -163,7 +162,7 @@
                 android:layout_alignParentStart="true"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Date" />
+                android:text="Due Date" />
 
             <Button
                 android:id="@+id/btnSetDate"
@@ -184,7 +183,7 @@
                 android:layout_below="@+id/btnSetDate"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Note" />
+                android:text="Description" />
 
         </RelativeLayout>
     </ScrollView>

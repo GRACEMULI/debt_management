@@ -1,8 +1,5 @@
 package com.example.jasper.manageexpense;
 
-/**
- * Created by Techsoft-003 on 3/16/2017.
- */
 
 public class TabHistory_Week_List {
     private int id;

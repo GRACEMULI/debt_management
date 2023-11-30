@@ -26,7 +26,8 @@
         android:layout_alignParentTop="true"
         android:text="Amount"
         android:textAlignment="viewStart"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:gravity="start" />
 
     <TextView
         android:id="@+id/txtView_date"
@@ -37,7 +38,7 @@
         android:layout_below="@+id/txtView_name"
         android:layout_toLeftOf="@+id/txtView_amount"
         android:layout_toStartOf="@+id/txtView_amount"
-        android:text="Date"
+        android:text="Due Date"
         android:textSize="18sp" />
 
 </RelativeLayout>

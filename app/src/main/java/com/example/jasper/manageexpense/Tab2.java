@@ -36,10 +36,6 @@ import java.util.List;
 import java.util.Locale;
 
 
-/**
- * Created by Jasper on 3/2/2017.
- */
-
 public class Tab2 extends Activity implements AdapterView.OnItemSelectedListener {
 
     EditText amount_add;
@@ -77,33 +73,33 @@ public class Tab2 extends Activity implements AdapterView.OnItemSelectedListener
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
 
         alertDialogBuilder.setView(promptsView);
-            final EditText userInput = (EditText) promptsView
-                    .findViewById(R.id.editTextDialog);
+        final EditText userInput = (EditText) promptsView
+                .findViewById(R.id.editTextDialog);
 
         alertDialogBuilder
                 .setCancelable(false)
-                .
+                        .
 
-            setPositiveButton("OK",
-                                      new DialogInterface.OnClickListener() {
-                public void onClick (DialogInterface dialog,int id){
-                    amount_add.setText(userInput.getText());
-                }
-            }) .
-                    setNegativeButton("Cancel",
-                                      new DialogInterface.OnClickListener() {
-                public void onClick (DialogInterface dialog,int id){
-                    dialog.cancel();
-                }
-            });
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
+                setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick (DialogInterface dialog,int id){
+                                amount_add.setText(userInput.getText());
+                            }
+                        }) .
+                setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick (DialogInterface dialog,int id){
+                                dialog.cancel();
+                            }
+                        });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
 
         amount_add.setOnClickListener(new View.OnClickListener()
 
-            {
-                @Override
-                public void onClick (View v){
+        {
+            @Override
+            public void onClick (View v){
                 LayoutInflater li = LayoutInflater.from(context);
                 View promptsView = li.inflate(R.layout.prompts, null);
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
@@ -129,21 +125,21 @@ public class Tab2 extends Activity implements AdapterView.OnItemSelectedListener
                 alertDialog.show();
 
             }
-            });
+        });
         buttonCancel.setOnClickListener(new View.OnClickListener()
 
-            {
-                @Override
-                public void onClick (View v){
+        {
+            @Override
+            public void onClick (View v){
                 finish();
             }
-            });
+        });
 
         button.setOnClickListener(new View.OnClickListener()
 
-            {
-                @Override
-                public void onClick (View arg0){
+        {
+            @Override
+            public void onClick (View arg0){
                 String category_add = spinner.getSelectedItem().toString();
                 String amount = amount_add.getText().toString();
                 String date = date_add.getText().toString();
@@ -175,7 +171,7 @@ public class Tab2 extends Activity implements AdapterView.OnItemSelectedListener
                     imm_note.hideSoftInputFromWindow(note.getWindowToken(), 0);
                     Toast.makeText(Tab2.this, "New Expense Added!", Toast.LENGTH_LONG).show();
 
-                 for(int i = 0; i < category_add.length(); i++);
+                    for(int i = 0; i < category_add.length(); i++);
                     if(category_add == null) {
                         Toast.makeText(getApplicationContext(), "Please Add Category first!", Toast.LENGTH_LONG).show();
                     }
@@ -186,7 +182,7 @@ public class Tab2 extends Activity implements AdapterView.OnItemSelectedListener
                 }
 
             }
-            });
+        });
     }
 
     private void loadListView() {

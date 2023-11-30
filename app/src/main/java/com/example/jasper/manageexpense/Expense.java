@@ -9,9 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TabHost;
 
-/**
- * Created by Jasper on 3/3/2017.
- */
 
 public class Expense extends Fragment {
 

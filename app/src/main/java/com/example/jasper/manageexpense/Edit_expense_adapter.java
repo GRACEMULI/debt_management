@@ -8,10 +8,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Techsoft - 001 on 4/22/2017.
- */
-
 public class Edit_expense_adapter extends BaseAdapter {
     Context context;
     List<Edit_expense_List> lists;

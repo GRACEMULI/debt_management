@@ -59,6 +59,20 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/setAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnCancelExpense"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Amount"
+            android:ems="10"
+            android:inputType="textPersonName|numberDecimal"
+            android:textColor="@android:color/background_dark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
             android:id="@+id/editTextAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -122,7 +136,7 @@
             android:layout_alignParentRight="true"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="ADDITIONAL INFOS"
+            android:text="ADDITIONAL INFORMATION"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -133,6 +147,7 @@
             android:layout_alignBottom="@+id/setDate"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:hint="Due Date"
             android:ems="10"
             android:inputType="date"
             android:textColor="@android:color/background_dark"
@@ -164,7 +179,7 @@
             android:layout_below="@+id/date"
             android:layout_marginTop="22dp"
             android:ems="10"
-            android:hint="Note"
+            android:hint="Description"
             android:inputType="textPersonName"
             android:textSize="15sp" />
 

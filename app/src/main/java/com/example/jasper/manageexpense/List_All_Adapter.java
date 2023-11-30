@@ -10,10 +10,6 @@ import android.widget.TextView;
 import java.text.DecimalFormat;
 import java.util.List;
 
-/**
- * Created by Techsoft - 001 on 5/11/2017.
- */
-
 public class List_All_Adapter extends BaseAdapter {
 
     Context context;
@@ -50,7 +46,7 @@ public class List_All_Adapter extends BaseAdapter {
 
         txtName.setText(listAlls.get(position).getName());
         DecimalFormat precision = new DecimalFormat("0.00");
-        txtAmount.setText(precision.format(listAlls.get(position).getAmount()) + " Php");
+        txtAmount.setText(precision.format(listAlls.get(position).getAmount()) + " Ksh");
         progressBar.setProgress(txtAmount.getAutoLinkMask());
         progressBar.setProgress(0);
         progressBar.setMax(100);

@@ -20,10 +20,6 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.List;
 
-/**
- * Created by Techsoft - 001 on 4/25/2017.
- */
-
 public class Update_AddExpense extends Activity{
     ListView listView;
     List<Edit_expense_List> listExpense;
@@ -127,7 +123,7 @@ public class Update_AddExpense extends Activity{
     public void ShowDialogBox(final String ItemName, final String ItemAmount, final String ItemDate, final String ItemNote,  final Integer id) {
         final Dialog dialog = new Dialog(Update_AddExpense.this);
         dialog.setCancelable(true);
-        dialog.setTitle("Update / Delete Expense");
+        dialog.setTitle("Update / Delete Debt");
         dialog.setContentView(R.layout.edit_expense_in_history);
         final TextView del_id = (TextView) dialog.findViewById(R.id.txtID);
         del_id.setText(""+ids);
@@ -181,7 +177,7 @@ public class Update_AddExpense extends Activity{
 
                 db.updateCategory(ids, Category_name);
                 db.updateCategoryAdd(ids, Category_name, amount, date, note);
-                Toast.makeText(Update_AddExpense.this, "Expense updated!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Update_AddExpense.this, "Debt updated!", Toast.LENGTH_SHORT).show();
 
                 loadListView();
                 dialog.dismiss();
@@ -195,7 +191,7 @@ public class Update_AddExpense extends Activity{
                 final AlertDialog.Builder dialog1 = new AlertDialog.Builder(Update_AddExpense.this)
                         .setTitle("Delete / Transfer Items")
                         .setMessage("Do you want delete this Items?" + "\n" + "Id: "+ ids + "\n" +"Name :  " + listExpense.get(id).getName().toString() + "\n" + "Amount :  " + listExpense.get(id).getAmount() + "\n" +
-                                "Date :  " + listExpense.get(id).getDate().toString() + "\n" + "Note :  " + listExpense.get(id).getNote().toString() + "\n" + "" + "\n" +
+                                "Due Date :  " + listExpense.get(id).getDate().toString() + "\n" + "Description :  " + listExpense.get(id).getNote().toString() + "\n" + "" + "\n" +
                                 "Or do you want to transfer this data to another Category?")
                         .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                             @Override
@@ -214,7 +210,7 @@ public class Update_AddExpense extends Activity{
                                                // dbHelper.deleteAddCategory(name);
                                                 adapter.notifyDataSetChanged();
                                                 loadListView();
-                                                Toast.makeText(Update_AddExpense.this, "Expense " + name + "is " + deleted, Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(Update_AddExpense.this, "Debt " + name + "is " + deleted, Toast.LENGTH_SHORT).show();
 
                                                 dialog.dismiss();
                                             }

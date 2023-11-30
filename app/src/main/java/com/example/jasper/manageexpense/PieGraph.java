@@ -21,9 +21,6 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Techsoft-003 on 3/29/2017.
- */
 
 public class PieGraph extends Fragment{
 

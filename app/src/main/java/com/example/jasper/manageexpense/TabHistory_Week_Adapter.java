@@ -14,9 +14,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Techsoft-003 on 3/16/2017.
- */
 
 public class TabHistory_Week_Adapter extends BaseAdapter{
     Context context;

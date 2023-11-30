@@ -9,10 +9,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Techsoft - 001 on 4/12/2017.
- */
-
 public class Tab1_Adapter extends BaseAdapter {
 
     Context context;
