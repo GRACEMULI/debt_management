@@ -5,15 +5,15 @@
         <item
             android:id="@+id/Overview"
             android:icon="@mipmap/pentagon"
-            android:title="Overview" />
+            android:title="Home" />
         <item
             android:id="@+id/History"
             android:icon="@mipmap/reorder"
-            android:title="History" />
+            android:title="View Debts" />
         <item
             android:id="@+id/Graph_all"
             android:icon="@mipmap/pie"
-            android:title="Budget" />
+            android:title="Statistics" />
         <item
             android:id="@+id/Distribution"
             android:icon="@mipmap/dis"
