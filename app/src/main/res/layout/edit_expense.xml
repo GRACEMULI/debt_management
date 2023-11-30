@@ -36,10 +36,11 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/include"
         android:drawableLeft="@mipmap/chevronleftblack"
-        android:text=" Edit Expense"
+        android:text=" Edit Debt"
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:gravity="start" />
 
 </RelativeLayout>

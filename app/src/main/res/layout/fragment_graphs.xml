@@ -4,10 +4,8 @@
     android:layout_height="match_parent"
     tools:context="layout.graphs">
 
-    <!-- TODO: Update blank fragment layout --><![CDATA[
-    >
-
-]]>
+    <!-- TODO: Update blank fragment layout -->
+    <![CDATA[]]>
 
     <TabHost
         android:layout_width="200dip"
