@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ManageExpense</string>
+    <string name="app_name">Debt Management</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -19,10 +19,10 @@
 
     </string-array>
     <string-array name="Member_names">
-        <item>Robert</item>
-        <item>Shani</item>
-        <item>Maddi</item>
-        <item>Kate</item>
+        <item>Grace</item>
+        <item>Monika</item>
+        <item>Sam</item>
+        <item>Andrew</item>
     </string-array>
 
     <string-array name="profile_pics">
