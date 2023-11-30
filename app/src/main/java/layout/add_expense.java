@@ -45,7 +45,7 @@ public class add_expense extends Fragment {
         TabMenu1.setContent(new Intent(getActivity(),Tab1.class));
 
         //Setting up tab 2 name.
-        TabMenu2.setIndicator("Expense");
+        TabMenu2.setIndicator("Debt");
         //Set tab 3 activity to tab 1 menu.
         TabMenu2.setContent(new Intent(getActivity(),Tab2.class));
 
