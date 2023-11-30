@@ -169,7 +169,7 @@ public class Tab2 extends Activity implements AdapterView.OnItemSelectedListener
                     InputMethodManager imm_note = (InputMethodManager)
                             getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm_note.hideSoftInputFromWindow(note.getWindowToken(), 0);
-                    Toast.makeText(Tab2.this, "New Expense Added!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Tab2.this, "New Debt Added!", Toast.LENGTH_LONG).show();
 
                     for(int i = 0; i < category_add.length(); i++);
                     if(category_add == null) {

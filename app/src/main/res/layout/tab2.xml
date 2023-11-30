@@ -1,74 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="2dp"
     android:weightSum="1">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
-
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="1">
-
-        </RelativeLayout>
-
-        <Button
-            android:id="@+id/btnCancel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@+id/relativeLayout"
-            android:layout_toLeftOf="@+id/textView3"
-            android:layout_toRightOf="@+id/relativeLayout"
-            android:layout_toStartOf="@+id/textView3"
-            android:layout_weight="124"
-            android:background="@android:color/darker_gray"
-            android:drawableLeft="@mipmap/closel"
-            android:drawableStart="@mipmap/closel"
-            android:text="CANCEL"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="@android:color/background_light"
-            android:textSize="12sp"
-            android:gravity="center_horizontal" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="2dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/relativeLayout"
-            android:layout_centerHorizontal="true"
-            android:text="|"
-            android:textSize="36sp" />
-
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/textView3"
-            android:layout_toRightOf="@+id/textView3"
-            android:background="@android:color/darker_gray"
-            android:drawableLeft="@mipmap/checkl"
-            android:drawableStart="@mipmap/checkl"
-            android:text="SAVE"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="@android:color/background_light"
-            android:textSize="12sp" />
-
-
-    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -146,7 +83,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="205dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -158,8 +95,8 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/editNote"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Due Date" />
@@ -172,20 +109,87 @@
                 android:layout_toEndOf="@+id/editDate"
                 android:layout_toRightOf="@+id/editDate"
                 android:onClick="setDate"
-                android:text="Set Date" />
+                android:text="Set Date"
+                android:background="@color/myBlueColor"
+                android:textColor="@android:color/white"
+                />
 
             <EditText
                 android:id="@+id/editNote"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_below="@+id/btnSetDate"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="Description" />
 
         </RelativeLayout>
     </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="326dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="116dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_toStartOf="@+id/textView3"
+            android:layout_toLeftOf="@+id/textView3"
+            android:background="@color/myRedColor"
+            android:text="CANCEL"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_centerHorizontal="true"
+            android:text="|"
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="-3dp"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginTop="116dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_toEndOf="@+id/textView3"
+            android:layout_toRightOf="@+id/textView3"
+            android:background="@color/myBlueColor"
+            android:text="SAVE"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
 
 </LinearLayout>

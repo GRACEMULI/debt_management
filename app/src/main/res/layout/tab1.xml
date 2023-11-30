@@ -20,11 +20,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@android:color/darker_gray"
-            android:drawableLeft="@mipmap/closel"
-            android:drawableStart="@mipmap/closel"
+            android:background="@color/myRedColor"
             android:text="CANCEL"
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -44,11 +42,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="14dp"
             android:layout_weight="1"
-            android:background="@android:color/darker_gray"
-            android:drawableLeft="@mipmap/checkl"
-            android:drawableStart="@mipmap/checkl"
+            android:background="@color/myBlueColor"
             android:text="ADD"
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="normal|bold" />
 

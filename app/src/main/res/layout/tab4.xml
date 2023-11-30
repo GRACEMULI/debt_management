@@ -22,10 +22,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@android:color/darker_gray"
-            android:drawableStart="@mipmap/closel"
+            android:background="@color/myRedColor"
             android:text="CANCEL"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/textView2"
@@ -43,10 +42,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
-            android:background="@android:color/darker_gray"
-            android:drawableStart="@mipmap/checkl"
+            android:background="@color/myBlueColor"
             android:text="SAVE"
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/white"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -160,11 +158,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
             android:layout_toRightOf="@+id/date"
-            android:background="@android:color/darker_gray"
+            android:background="@color/myBlueColor"
             android:drawableStart="@mipmap/calendar"
             android:onClick="setDate"
             android:text="Set Date  "
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/white"
             android:textSize="14sp"
             android:textStyle="bold" />
 
