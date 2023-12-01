@@ -24,7 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String EXPENSE_TABLE_NAME = "Category";
     public static final String EXPENSE_COLUMN_ID = "id";
     public static final String EXPENSE_COLUMN_CATEGORY_NAME = "category_name";
-   // public static final String EXPENSE_COLUMN_CATEGORY_IDENTIFIER = "identifier";
+    // public static final String EXPENSE_COLUMN_CATEGORY_IDENTIFIER = "identifier";
 
     public static final String EXPENSE_TABLE_ADD = "Add_Expense";
     public static final String EXPENSE_ADD_COLUMN_ID = "add_id";
@@ -33,6 +33,14 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String EXPENSE_ADD_COLUMN_DATE = "date";
     public static final String EXPENSE_ADD_COLUMN_NOTE = "note";
 
+
+    // User table columns
+    public static final String USER_TABLE_NAME = "User";
+    public static final String USER_COLUMN_ID = "user_id";
+    public static final String USER_COLUMN_NAME = "name";
+    public static final String USER_COLUMN_EMAIL = "email";
+    public static final String USER_COLUMN_PHONE = "phone";
+    public static final String USER_COLUMN_PASSWORD = "password";
 
     private HashMap hp;
     private Context con;
@@ -51,6 +59,15 @@ public class DBHelper extends SQLiteOpenHelper {
 
         String createTableAdd = "create table Add_Expense (add_id integer primary key AUTOINCREMENT, category_add, amount, date, note);";
         db.execSQL(createTableAdd);
+
+        // The table for user information
+        String createUserTable = "CREATE TABLE " + USER_TABLE_NAME + " (" +
+                USER_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                USER_COLUMN_NAME + " TEXT, " +
+                USER_COLUMN_EMAIL + " TEXT, " +
+                USER_COLUMN_PHONE + " TEXT, " +
+                USER_COLUMN_PASSWORD + " TEXT)";
+        db.execSQL(createUserTable);
     }
 
     @Override
@@ -187,7 +204,7 @@ public class DBHelper extends SQLiteOpenHelper {
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             overList = new Overview_ListView(cursor.getInt(0), cursor.getString(cursor.getColumnIndexOrThrow("category_add")), cursor.getInt(cursor.getColumnIndexOrThrow("total")),
-                     cursor.getString(cursor.getColumnIndexOrThrow("date")), cursor.getString(cursor.getColumnIndexOrThrow("note")));
+                    cursor.getString(cursor.getColumnIndexOrThrow("date")), cursor.getString(cursor.getColumnIndexOrThrow("note")));
             listOverview.add(overList);
             cursor.moveToNext();
 
@@ -307,5 +324,30 @@ public class DBHelper extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return listOverview;
+    }
+
+    // Method to insert a new user into the User table
+    public long registerUser(String name, String email, String phone, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(USER_COLUMN_NAME, name);
+        values.put(USER_COLUMN_EMAIL, email);
+        values.put(USER_COLUMN_PHONE, phone);
+        values.put(USER_COLUMN_PASSWORD, password);
+        long userId = db.insert(USER_TABLE_NAME, null, values);
+        db.close();
+        return userId;
+    }
+
+    public boolean loginUser(String email, String password) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {USER_COLUMN_ID};
+        String selection = USER_COLUMN_EMAIL + "=? AND " + USER_COLUMN_PASSWORD + "=?";
+        String[] selectionArgs = {email, password};
+        Cursor cursor = db.query(USER_TABLE_NAME, columns, selection, selectionArgs, null, null, null);
+        boolean userExists = cursor.moveToFirst();
+        cursor.close();
+        db.close();
+        return userExists;
     }
 }
