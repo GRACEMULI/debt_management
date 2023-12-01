@@ -11,6 +11,7 @@ public class Registration extends AppCompatActivity {
 
     private EditText editTextName, editTextEmail, editTextPhone, editTextPassword;
     private Button buttonRegister;
+    private TextView textViewLoginLink;
     DBHelper dbHelper;
 
     @Override
@@ -23,6 +24,7 @@ public class Registration extends AppCompatActivity {
         editTextPhone = (EditText) findViewById(R.id.editTextPhone);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
+        textViewLoginLink = (Button) findViewById(R.id.textViewLoginLink);
 
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +42,6 @@ public class Registration extends AppCompatActivity {
                     // Registration successful
                     Toast.makeText(Registration.this, "Registration successful", Toast.LENGTH_SHORT).show();
 
-                    // Navigate to the main screen (replace MainActivity.class with your main activity)
                     Intent intent = new Intent(Registration.this, MainActivity.class);
                     startActivity(intent);
                     finish(); // Finish the current activity to prevent going back to the registration screen
@@ -48,6 +49,15 @@ public class Registration extends AppCompatActivity {
                     // Registration failed
                     Toast.makeText(Registration.this, "Registration failed", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        textViewLoginLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the login screen
+                Intent intent = new Intent(Registration.this, Login.class);
+                startActivity(intent);
             }
         });
 
